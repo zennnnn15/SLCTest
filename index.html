@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EarthyEstate - Responsive Navbar + Scroll Spy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .bg-earth {
+      background-color: #7B5E57;
+    }
+    .hover\:bg-earth-hover:hover {
+      background-color: #5C443D;
+    }
+    .text-earth {
+      color: #7B5E57;
+    }
+    .bg-beige {
+      background-color: #F5F0E1;
+    }
+    /* Active nav link styling */
+    .active-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #F5F0E1; /* Cream text */
+  background-image: linear-gradient(90deg, #68a673, #a67c39); /* lighter green to warm gold */
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: background-image 0.3s ease, color 0.3s ease;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+
+  </style>
+</head>
+<body class="bg-beige text-gray-900">
+
+<!-- Navbar -->
+<nav
+  class="fixed top-0 left-0 right-0 z-50 shadow text-white"
+  style="background: linear-gradient(to right, #2f855a, #744210);"
+>
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="#" class="flex items-center space-x-3 no-underline">
+            <div class="bg-darkgreen rounded-full p-2 flex items-center justify-center">
+              <img src="/assets/logo.png" alt="Logo" class="h-10 w-auto" />
+            </div>
+            <span
+              class="text-white text-2xl font-semibold tracking-wide"
+              style="font-family: 'Playfair Display', serif; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);"
+            >
+              SLC &amp; CO
+            </span>
+          </a>
+          
+          
+      
+      
+      
+      <!-- Hamburger button -->
+      <button id="menu-btn" class="md:hidden block focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+  
+      <!-- Nav Links -->
+      <div id="menu" class="hidden md:flex space-x-4">
+        <a href="#home" class="py-2 px-3 hover:bg-earth-hover rounded-md transition">Home</a>
+        <a href="#schedule" class="py-2 px-3 hover:bg-earth-hover rounded-md transition">Schedule</a>
+        <a href="#services" class="py-2 px-3 hover:bg-earth-hover rounded-md transition">Services</a>
+        <a href="#blog" class="py-2 px-3 hover:bg-earth-hover rounded-md transition">Blog</a>
+        <a href="#galleries" class="py-2 px-3 hover:bg-earth-hover rounded-md transition">Galleries</a>
+        <a href="#facts" class="py-2 px-3 hover:bg-earth-hover rounded-md transition">Facts</a>
+        <a href="#agents" class="py-2 px-3 hover:bg-earth-hover rounded-md transition">Agents</a>
+        <a href="#contact" class="py-2 px-3 hover:bg-earth-hover rounded-md transition">Contact</a>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-earth px-4 pb-4">
+      <a href="#home" class="block py-3 px-4 hover:bg-earth-hover rounded-md transition">Home</a>
+      <a href="#schedule" class="block py-3 px-4 hover:bg-earth-hover rounded-md transition">Schedule</a>
+      <a href="#services" class="block py-3 px-4 hover:bg-earth-hover rounded-md transition">Services</a>
+      <a href="#blog" class="block py-3 px-4 hover:bg-earth-hover rounded-md transition">Blog</a>
+      <a href="#galleries" class="block py-3 px-4 hover:bg-earth-hover rounded-md transition">Galleries</a>
+      <a href="#facts" class="block py-3 px-4 hover:bg-earth-hover rounded-md transition">Facts</a>
+      <a href="#agents" class="block py-3 px-4 hover:bg-earth-hover rounded-md transition">Agents</a>
+      <a href="#contact" class="block py-3 px-4 hover:bg-earth-hover rounded-md transition">Contact</a>
+    </div>
+  </nav>
+  
+
+  <!-- Main content -->
+  <main class="pt-20 space-y-32">
+
+    <!-- Home -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative bg-white px-0 sm:px-0">
+        <img
+          src="/assets/banner.png"
+          alt="Banner"
+          class="absolute inset-0 object-cover rounded-none"
+        />
+        <div class="relative z-10 bg-black bg-opacity-50 p-6 sm:p-10 rounded max-w-3xl text-center text-white">
+          <!-- Your content here -->
+        </div>
+      </section>
+      
+      
+      
+  
+
+    <!-- Schedule -->
+    <section
+    id="schedule"
+    class="relative bg-cover bg-center bg-no-repeat text-white max-w-5xl mx-auto px-6 py-20 text-center rounded-lg overflow-hidden"
+    style="background-image: url('/assets/estate.png');"
+  >
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+    <!-- Content -->
+    <div class="relative z-10">
+      <h2 class="text-3xl font-bold mb-6 text-earth-light">Schedule a Viewing</h2>
+      <p class="mb-4 text-lg">Choose a time to visit your favorite property with one of our expert agents.</p>
+      <button class="bg-earth text-white py-2 px-6 rounded hover:bg-earth-hover transition">
+        Book Now
+      </button>
+    </div>
+  </section>
+  
+
+    <!-- Services -->
+    <section id="services" class="bg-white py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-10 text-earth">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gray-100 p-6 rounded shadow text-center">
+            <h3 class="text-xl font-semibold mb-2 text-earth">Buy a Home</h3>
+            <p>Find the perfect home that suits your lifestyle and budget.</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded shadow text-center">
+            <h3 class="text-xl font-semibold mb-2 text-earth">Sell a Home</h3>
+            <p>Get top value with our expert agents and digital marketing tools.</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded shadow text-center">
+            <h3 class="text-xl font-semibold mb-2 text-earth">Rent a Property</h3>
+            <p>Explore the best rental listings in top neighborhoods.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10 text-earth">Latest Blog Posts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2 text-earth">How to Prepare Your Home for Sale</h3>
+          <p>Discover tips and strategies to make your property market-ready.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2 text-earth">Top 10 Neighborhoods in 2025</h3>
+          <p>Explore the hottest locations for buyers and investors alike.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galleries -->
+    <section id="galleries" class="bg-gray-100 py-16 px-6">
+      <h2 class="text-3xl font-bold text-center mb-10 text-earth">Property Galleries</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="https://source.unsplash.com/400x300/?house,interior,nature" class="rounded shadow" alt="House 1" />
+        <img src="https://source.unsplash.com/400x300/?apartment,interior,wood" class="rounded shadow" alt="House 2" />
+        <img src="https://source.unsplash.com/400x300/?villa,modern,trees" class="rounded shadow" alt="House 3" />
+      </div>
+    </section>
+
+    <!-- Facts -->
+    <section id="facts" class="bg-white py-16 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6 text-earth">Real Estate in Numbers</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div>
+          <p class="text-5xl font-bold text-earth">1,200+</p>
+          <p>Homes Sold</p>
+        </div>
+        <div>
+          <p class="text-5xl font-bold text-earth">98%</p>
+          <p>Client Satisfaction</p>
+        </div>
+        <div>
+          <p class="text-5xl font-bold text-earth">300+</p>
+          <p>Professional Agents</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agents -->
+    <section id="agents" class="bg-gray-100 py-16 px-6">
+      <h2 class="text-3xl font-bold text-center mb-10 text-earth">Meet Our Agents</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="bg-white p-4 rounded shadow text-center">
+          <img src="https://source.unsplash.com/100x100/?person" class="mx-auto rounded-full mb-4" alt="Jane Doe" />
+          <h3 class="text-lg font-semibold text-earth">Jane Doe</h3>
+          <p>Luxury Specialist</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <img src="https://source.unsplash.com/100x100/?person,man" class="mx-auto rounded-full mb-4" alt="John Smith" />
+          <h3 class="text-lg font-semibold text-earth">John Smith</h3>
+          <p>Investment Expert</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <img src="https://source.unsplash.com/100x100/?person,woman" class="mx-auto rounded-full mb-4" alt="Emily Johnson" />
+          <h3 class="text-lg font-semibold text-earth">Emily Johnson</h3>
+          <p>Family Homes Advisor</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-white py-16 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6 text-earth">Contact Us</h2>
+      <p class="mb-4">Have questions? Reach out to our team today!</p>
+      <form class="max-w-xl mx-auto grid grid-cols-1 gap-4">
+        <input type="text" placeholder="Name" class="p-3 border rounded" />
+        <input type="email" placeholder="Email" class="p-3 border rounded" />
+        <textarea rows="4" placeholder="Message" class="p-3 border rounded"></textarea>
+        <button class="bg-earth text-white py-3 px-6 rounded hover:bg-earth-hover transition">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-earth text-white py-6 text-center">
+    <p>&copy; 2025 EarthyEstate. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // Scroll spy
+    const sections = document.querySelectorAll("section");
+    // Combine desktop and mobile nav links into one list
+    const navLinks = [
+      ...document.querySelectorAll("nav > div:nth-child(1) a"),
+      ...document.querySelectorAll("#mobile-menu a")
+    ];
+
+    function activateLink() {
+      let index = sections.length;
+
+      while (--index >= 0) {
+        const sectionTop = sections[index].offsetTop - 130;
+        if (window.scrollY >= sectionTop) {
+          navLinks.forEach(link => link.classList.remove("active-link"));
+          // Highlight desktop and mobile links separately
+          const id = sections[index].id;
+          navLinks.forEach(link => {
+            if (link.getAttribute("href") === "#" + id) {
+              link.classList.add("active-link");
+            }
+          });
+          break;
+        }
+      }
+    }
+
+    activateLink();
+    window.addEventListener("scroll", activateLink);
+  </script>
+</body>
+</html>
